@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Password Generator</title>
+</head>
+<body>
+    <form action="{% url 'password' %}" method="get">
+        <h1>Password Generator</h1>
+        
+        <span>Length:</span>
+        <input type="number" name="length" id="length">
+        
+        <span>Uppercase:</span>
+        <input type="checkbox" name="uppercase" id="Uppercase">
+        
+        <span>Numbers:</span>
+        <input type="checkbox" name="numbers" id="Numbers">
+        
+        <span>Special Symbols:</span>
+        <input type="checkbox" name="symbols" id="Special Symbols">
+        
+        <input type="submit" value="Generate Password">
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'portfolio/base.html' %} {% block body %}
+<div class="container">
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">{{blog.title}}</h5>
+            <p class="card-text">
+                {{blog.description}}
+            </p>
+        </div>
+        <div class="card-footer text-muted">{{blog.date}}</div>
+    </div>
+</div>
+{% endblock body %}
